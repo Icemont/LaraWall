@@ -24,7 +24,7 @@ class PackageFactory extends Factory
         return [
             'name' => 'Package ' . $this->faker->firstNameFemale(),
             'note' => $this->faker->realText(100),
-            'status' => $this->faker->boolean(85),
+            'status' => $this->faker->boolean(95),
         ];
     }
 }
