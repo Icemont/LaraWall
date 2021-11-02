@@ -46,7 +46,7 @@ In the next step, create a user for authorization in the administrative area of 
 
     $ php artisan admin:create-user
 
-To access the admin panel, go to https://your_project_host/admin
+To access the admin panel, go to `https://your_project_host/admin`
 
 📌 You need to configure the Laravel task scheduler to change the status of subscriptions when they expire. Refer to the [official documentation](https://laravel.com/docs/8.x/scheduling#running-the-scheduler) for instructions.
 
