@@ -16,9 +16,9 @@ class PackageSeeder extends Seeder
     public function run()
     {
         $services = Service::all();
-        Package::factory()->count(10)->create()->each(function ($package) use ($services) {
+        Package::factory()->count(5)->create()->each(function ($package) use ($services) {
             $package->services()->attach(
-                $services->random(rand(1, 10))->pluck('id')->toArray()
+                $services->random(rand(1, 5))->pluck('id')->toArray()
             );
         });
     }

@@ -33,12 +33,17 @@ For authorization is used IP address of the server. For example, you created a s
 
 	$ composer create-project icemont/larawall
 
-After installation and basic configuration, perform migrations to create a database tables structure:
+After installation and basic configuration, run these command to publish "laravel-admin" assets：
+
+	$ php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
+
+
+Perform migrations to create a database tables structure:
 
 	$ php artisan migrate
 
 
-Then export menu structure data of the admin panel:
+Then import to DB menu structure data of the admin panel:
 
     $ php artisan db:seed --class=AdminTablesSeeder
 

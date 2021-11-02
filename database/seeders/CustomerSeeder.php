@@ -18,9 +18,9 @@ class CustomerSeeder extends Seeder
     {
         $packages = Package::all();
 
-        Customer::factory()->count(10)->hasIps(5)->create()->each(function (Customer $customer) use ($packages) {
+        Customer::factory()->count(5)->hasIps(3)->create()->each(function (Customer $customer) use ($packages) {
             $customer->packages()->sync(
-                $packages->random(rand(1, 5))->pluck('id')->toArray()
+                $packages->random(rand(1, 3))->pluck('id')->toArray()
             );
             $customer->subscriptions()->each(function (Subscription $subscription) {
                 $subscription->internal_name = $subscription->package->name . ' subscription';

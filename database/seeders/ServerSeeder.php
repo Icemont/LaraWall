@@ -15,7 +15,7 @@ class ServerSeeder extends Seeder
      */
     public function run()
     {
-        Server::factory()->count(10)->hasServices(10)->create()->each(function (Server $server) {
+        Server::factory()->count(5)->hasServices(5)->create()->each(function (Server $server) {
             $server->services()->each(function (Service $service) use ($server) {
                 $service->name = $server->name . ' ' . $service->name;
                 $service->save();
