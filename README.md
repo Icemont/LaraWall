@@ -48,6 +48,8 @@ In the next step, create a user for authorization in the administrative area of 
 
 To access the admin panel, go to https://your_project_host/admin
 
+📌 You need to configure the Laravel task scheduler to change the status of subscriptions when they expire. Refer to the [official documentation](https://laravel.com/docs/8.x/scheduling#running-the-scheduler) for instructions.
+
 📌 Installation, configuration, and deployment are basically the same as a typical Laravel-based project, so for detailed instructions you can refer to the official documentation on Laravel framework [installation](https://laravel.com/docs/8.x/installation) and [deployment](https://laravel.com/docs/8.x/deployment).
 
 ## Demo
