@@ -62,6 +62,12 @@ Panel delivered with a demo data generator. To generate demo data, use command:
 
     $ php artisan db:seed
 
+## Development roadmap
+    📌 There are no specific deadlines and guarantees for the implementation.
+- Customer API with authorization by token (Sanctum)
+- User panel: login/registration, getting and editing data, managing subscriptions to packages, API keys management
+- Full firewall management on a single server or group of servers
+
 ## Contact
 
 Open an issue on GitHub if you have any problems or suggestions.
