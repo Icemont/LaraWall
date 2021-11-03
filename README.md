@@ -1,12 +1,15 @@
 # LaraWall
 
 [![Version](https://poser.pugx.org/icemont/larawall/version)](//packagist.org/packages/icemont/larawall)
+[![PHP Version Require](http://poser.pugx.org/icemont/larawall/require/php)](https://packagist.org/packages/icemont/larawall)
 [![License](https://poser.pugx.org/icemont/larawall/license)](//packagist.org/packages/icemont/larawall)
 
 LaraWall - web panel to manage access to service ports of a server group.
 
 ## About LaraWall
 LaraWall is a control panel for managing access to service ports on a large group of servers from a single point. LaraWall is based on Laravel PHP framework and [Z-song admin panel generator](https://github.com/z-song/laravel-admin).
+
+![](https://raw.githubusercontent.com/Icemont/larawall-docs/main/assets/screenshots/admin_servers_list.png "LaraWall")
 
 Can be used, for example, to control access to different services (each service is a different port on a different server) for a lot of customers and a group of servers. Service ports can be bundled into packages, and customers can be subscribed to these packages. Subscriptions can have an expiration date.
 You can also change the status for each entity separately, e.g. to disable a subscription for a certain package for all customers, you don't have to disable every subscription separately, just disable the package. Also, for example, you can disable an individual service port or server with all ports at once, so you do not have to remove it from all packages separately.
@@ -17,8 +20,7 @@ You can also change the status for each entity separately, e.g. to disable a sub
 - "Users", which have the entity "IP addresses of users"
 - "Subscriptions" - binding "Packets" to "Users"
 
-The relationships are shown in more detail in the diagram:
-![](https://raw.githubusercontent.com/Icemont/larawall-docs/main/assets/images/db-diagram.png "Diagram")
+The relationships are shown in more detail in the [diagram](https://raw.githubusercontent.com/Icemont/larawall-docs/main/assets/images/db-diagram.png).
 
 ## Handlers for servers and API
 **List of available handlers for servers:**
