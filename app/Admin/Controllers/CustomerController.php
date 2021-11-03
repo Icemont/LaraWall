@@ -197,8 +197,13 @@ class CustomerController extends AdminController
         $form = new Form(new Customer());
 
         $form->text('name', __('Name'))->required();
-        $form->text('nickname', __('Nickname'))->icon('fa-user-secret');
-        $form->email('email', __('E-mail'));
+        $form->text('nickname', __('Nickname'))
+            ->creationRules(["unique:customers"])
+            ->updateRules(["unique:customers,nickname,{{id}}"])
+            ->icon('fa-user-secret');
+        $form->email('email', __('E-mail'))
+            ->creationRules(['required', "unique:customers"])
+            ->updateRules(['required', "unique:customers,email,{{id}}"]);
         $form->mobile('phone', 'Phone')->options(['mask' => '9{5,15}']);
         $form->radio('legal', 'Account type')
             ->options([

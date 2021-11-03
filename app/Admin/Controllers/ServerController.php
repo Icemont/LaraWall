@@ -154,7 +154,10 @@ class ServerController extends AdminController
         $form->tab('Basic data', function ($form) {
             $form->text('name', __('Name'))->required();
             $form->text('hostname', __('Hostname'))->icon('fa-internet-explorer');
-            $form->ip('ip', __('IP address'))->required();
+            $form->ip('ip', __('IP address'))
+                ->required()
+                ->creationRules(['required', "unique:servers"])
+                ->updateRules(['required', "unique:servers,ip,{{id}}"]);
 
             $states = [
                 'on' => ['value' => 1, 'text' => 'enable', 'color' => 'success'],
