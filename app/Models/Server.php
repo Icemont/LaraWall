@@ -13,6 +13,9 @@ class Server extends Model
         'attributes' => 'array',
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function services()
     {
         return $this->hasMany(Service::class);

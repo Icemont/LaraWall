@@ -11,11 +11,17 @@ class Subscription extends Pivot
 
     public $incrementing = true;
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
     public function package()
     {
         return $this->hasOne(Package::class, 'id', 'package_id');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
     public function customer()
     {
         return $this->hasOne(Customer::class, 'id', 'customer_id');

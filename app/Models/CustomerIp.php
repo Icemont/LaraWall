@@ -9,6 +9,9 @@ class CustomerIp extends Model
 {
     use HasFactory;
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function customer()
     {
         return $this->belongsTo(Customer::class);
